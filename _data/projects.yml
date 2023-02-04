@@ -1,16 +1,17 @@
 # Projects
 # uncomment the urls if you wish to display them, and add your own URL
 
-# jazznotes.io
-- project: jazznotes.io
-  role: Founder & Primary Developer
-  duration: 2012 &mdash; Present
-  # url: "#"
-  description: Jazz Notes is an open source node/ember app that helps you keep track of your music compositions and new ideas.
+- project: High-Performance Exabyte Storage Systems (Samsung Electronics)
+  duration: 2022.5 &mdash; 2024.5
 
-# Springfield Community Outreach Group
-- project: Springfield Community Outreach Group
-  role: Co-Founder & Organizer
-  duration: 2007 &mdash; Present
-  # url: "#"
-  description: SCOG is a local monthly meetup in Springfield where we share opportunities to volunteer in the community and organize support for families and neighborhoods in need of assistance that the community can provide.
+- project: SNU-SKH Solution Research Center (SK Hynix)
+  duration: 2021.9 &mdash; 2023.8
+
+- project: Future Scalable OS (IITP)
+  duration: 2018.6 &mdash; 2023.5
+
+- project: Scalable IO Stack for future storage system (NRF)
+  duration: 2017.6 &mdash; 2020.3
+
+- project: System Software for Byte Addressable NVM (KEIT/MOTIE)
+  duration: 2016.3 &mdash; 2017.5

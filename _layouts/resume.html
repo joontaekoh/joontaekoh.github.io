@@ -97,26 +97,6 @@
         </div>
       </section>
 
-      {% if site.resume_section_links %}
-      <!-- begin Links -->
-      <section class="content-section">
-
-        <header class="section-header">
-          <h2>Publications</h2>
-        </header>
-
-        <div class="resume-item">
-          <ul class="resume-item-list">
-            {% for link in site.data.links %}
-            <li><a href={{ link.url }} itemprop="url">{{ link.description }}</a></li>
-            {% endfor %}
-          </ul>
-        </div>
-
-      </section>
-      <!-- end Links -->
-      {% endif %}
-
       {% if site.resume_section_projects %}
       <!-- begin Projects -->
       <section class="content-section">
@@ -131,7 +111,7 @@
           <h4 class="resume-item-details" itemprop="description">{{ project.role }}  &bull; {{ project.duration }}</h4>
           <p class="resume-item-copy">{{ project.description }}</p>
         </div>
-        {% endfor %}
+      {% endfor %}
 
       </section>
       <!-- end Projects -->
