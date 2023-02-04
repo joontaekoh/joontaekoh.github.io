@@ -48,14 +48,12 @@
 
       </header>
 
-      {% if site.resume_section_education %}
       <!-- begin Education -->
       <section class="content-section">
         <header class="section-header">
           <h2>Education</h2>
         </header>
 
-        {% for education in site.data.education %}
         <div class="resume-item" itemscope itemprop="alumniOf" itemtype="http://schema.org/CollegeOrUniversity">
           <h3 class="resume-item-title" itemprop="name">{{ education.uni }}</h3>
           <h4 class="resume-item-details group" itemprop="description">{{ education.degree }} &bull; {{ education.year }}</h4>
@@ -67,16 +65,13 @@
               {% endfor %}
             </ul>
 
-
           <p class="resume-item-copy">{{ education.summary }}</p>
         </div>
-        {% endfor %}
+
       </section>
       <!-- end Education -->
-      {% endif %}
 
       <section class="content-section">
-
         <header class="section-header">
           <h2>Publications</h2>
         </header>
@@ -98,14 +93,12 @@
         </div>
       </section>
 
-      {% if site.resume_section_projects %}
       <!-- begin Projects -->
       <section class="content-section">
         <header class="section-header">
           <h2>Projects</h2>
         </header>
 
-        {% for project in site.data.projects %}
         <div class="resume-item" itemscope itemtype="http://schema.org/CreativeWork">
           <meta itemprop="creator" content="{{ site.resume_name }}" itemtype="http://schema.org/Person" />
           <ul class="resume-item-list" itemprop="description">
@@ -116,13 +109,10 @@
             <li>System Software for Byte Addressable NVM (KEIT/MOTIE, 2016.3 — 2017.5)</li>
           </ul>
         </div>
-        {% endfor %}
 
       </section>
       <!-- end Projects -->
-      {% endif %}
 
-      {% if site.resume_section_recognition %}
       <!-- begin Recognition -->
       <section class="content-section">
 
@@ -141,7 +131,6 @@
 
       </section>
       <!-- end Recognition -->
-      {% endif %}
 
       {% if site.resume_print_social_links %}
       <!-- begin Print Social Links -->
