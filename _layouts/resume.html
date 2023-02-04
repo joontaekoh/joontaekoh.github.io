@@ -81,8 +81,8 @@
           <h2>Publications</h2>
         </header>
 
-        <div class="resume-item">
-          <ul class="resume-item-list">
+        <div class="resume-item" itemscope itemtype="http://schema.org/CreativeWork">
+          <h4 class="resume-item-list">
             <li>[USENIX FAST] Joontaek Oh, Seung Won Yoo, Hojin Nam, Changwoo Min and Youjip Won, “CJFS : Concurrent Journaling for Better Scalability”, In Proc. of USENIX Conference on File and Storage Technologies (FAST) 2023, Feb, 20-23, 2022</li>
             <li>[USENIX ATC] Juwon Kim, Minsu Jang, Danish Muhammad Teeshen, Joontaek Oh, and Youjip Won “IPLFS: Log-Structured File System without Garbage Collection“, In Proc. of USENIX Annual Technical Conference (ATC) 2022, July. 11-13, 2022</li>
             <li>[ACM SYSTOR] Seung Won Yoo, Joontaek Oh, and Youjip Won “O-AFA: Order Preserving All Flash Array“, in Proc. of The ACM International Systems and Storage Conference (SYSTOR), Haifa, Israel, June. 13-15, 2022</li>
@@ -93,7 +93,7 @@
             <li>[ACM TOS] Youjip Won, Joontaek Oh, Jaemin Jung, Gyeongyeol Choi, Seongbae Son, Jooyoung Hwang, Sangyeun Cho “Bringing Order to Chaos: Barrier-Enabled I/O Stack for Flash Storage”, ACM Transactions on Storage (TOS)</li>
             <li>[ACM TOS] Jinsoo Yoo, Joontaek Oh, Seongjin Lee, Youjip Won, Jin-Yong Ha, Jongsung Lee, Junseok Shim, “OrcFS: Orchestrated File System for Flash Storage”, ACM Transactions on Storage (TOS), Vol. 14, Issue 2, Apr, 2018</li>
             <li>[USENIX FAST] Youjip Won, Jaemin Jung, Gyeongyeol Choi, Joontaek Oh, Seongbae Son, Jooyoung Hwang, Sangyeun Cho “Barrier Enabled IO Stack for Flash Storage”, in proc. of USENIX Conference on File and Storage Technologies (FAST), Oakland, CA, USA, Feb. 12-15, 2018 (Awarded Best Paper)</li>
-          </ul>
+          </h4>
         </div>
       </section>
 
@@ -106,8 +106,9 @@
 
         {% for project in site.data.projects %}
         <div class="resume-item" itemscope itemtype="http://schema.org/CreativeWork">
+          <meta itemprop="creator" content="{{ site.resume_name }}" itemtype="http://schema.org/Person" />
           <h3 class="resume-item-title" itemprop="name">{% if project.url %}<a href="{{ project.url }}" itemprop="url">{{ project.project }}</a>{% else %}{{ project.project }}{% endif %}</h3>
-          <h4 class="resume-item-details">{{ project.role }}  &bull; {{ project.duration }}</h4>
+          <h4 class="resume-item-details" itemprop="description">{{ project.role }}  &bull; {{ project.duration }}</h4>
           <p class="resume-item-copy">{{ project.description }}</p>
         </div>
         {% endfor %}
@@ -126,14 +127,9 @@
 
         {% for recognition in site.data.recognitions %}
         <div class="resume-item">
-
-          <ul class="resume-item-list">
-            <li>High-Performance Exabyte Storage Systems (Samsung Electronics, 2022.5 — 2024.5)</li>
-            <li>SNU-SKH Solution Research Center (SK Hynix, 2021.9 — 2023.8)</li>
-            <li>Future Scalable OS (IITP, 2018.6 — 2023.5)</li>
-            <li>Scalable IO Stack for future storage system (NRF, 2017.6 — 2020.3)</li>
-            <li>System Software for Byte Addressable NVM (KEIT/MOTIE, 2016.3 — 2017.5)</li>
-          </ul>
+          <h3 class="resume-item-title" itemprop="award">{{ recognition.award }}</h3>
+          <h4 class="resume-item-details">{{ recognition.organization }} &bull; {{ recognition.year }}</h4>
+          <p class="resume-item-copy">{{ recognition.summary }}</p>
         </div>
         {% endfor %}
 
