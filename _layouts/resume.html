@@ -82,7 +82,8 @@
         </header>
 
         <div class="resume-item" itemscope itemtype="http://schema.org/CreativeWork">
-          <ul class="resume-item-list">
+          <meta itemprop="creator" content="{{ site.resume_name }}" itemtype="http://schema.org/Person" />
+          <ul class="resume-item-list" itemprop="description">
             <li>[USENIX FAST] Joontaek Oh, Seung Won Yoo, Hojin Nam, Changwoo Min and Youjip Won, “CJFS : Concurrent Journaling for Better Scalability”, In Proc. of USENIX Conference on File and Storage Technologies (FAST) 2023, Feb, 20-23, 2022</li>
             <li>[USENIX ATC] Juwon Kim, Minsu Jang, Danish Muhammad Teeshen, Joontaek Oh, and Youjip Won “IPLFS: Log-Structured File System without Garbage Collection“, In Proc. of USENIX Annual Technical Conference (ATC) 2022, July. 11-13, 2022</li>
             <li>[ACM SYSTOR] Seung Won Yoo, Joontaek Oh, and Youjip Won “O-AFA: Order Preserving All Flash Array“, in Proc. of The ACM International Systems and Storage Conference (SYSTOR), Haifa, Israel, June. 13-15, 2022</li>
@@ -107,9 +108,13 @@
         {% for project in site.data.projects %}
         <div class="resume-item" itemscope itemtype="http://schema.org/CreativeWork">
           <meta itemprop="creator" content="{{ site.resume_name }}" itemtype="http://schema.org/Person" />
-          <h3 class="resume-item-title" itemprop="name">{% if project.url %}<a href="{{ project.url }}" itemprop="url">{{ project.project }}</a>{% else %}{{ project.project }}{% endif %}</h3>
-          <h4 class="resume-item-details" itemprop="description">{{ project.role }}  &bull; {{ project.duration }}</h4>
-          <p class="resume-item-copy">{{ project.description }}</p>
+          <ul class="resume-item-list" itemprop="description">
+            <li>High-Performance Exabyte Storage Systems (Samsung Electronics, 2022.5 — 2024.5)</li>
+            <li>SNU-SKH Solution Research Center (SK Hynix, 2021.9 — 2023.8)</li>
+            <li>Future Scalable OS (IITP, 2018.6 — 2023.5)</li>
+            <li>Scalable IO Stack for future storage system (NRF, 2017.6 — 2020.3)</li>
+            <li>System Software for Byte Addressable NVM (KEIT/MOTIE, 2016.3 — 2017.5)</li>
+          </ul>
         </div>
         {% endfor %}
 
@@ -125,56 +130,17 @@
           <h2>Awards</h2>
         </header>
 
-        {% for recognition in site.data.recognitions %}
-        <div class="resume-item">
-          <h3 class="resume-item-title" itemprop="award">{{ recognition.award }}</h3>
-          <h4 class="resume-item-details">{{ recognition.organization }} &bull; {{ recognition.year }}</h4>
-          <p class="resume-item-copy">{{ recognition.summary }}</p>
-        </div>
-        {% endfor %}
-
-      </section>
-      <!-- end Recognition -->
-      {% endif %}
-
-      {% if site.resume_section_associations %}
-      <!-- begin Associations -->
-      <section class="content-section">
-
-        <header class="section-header">
-          <h2>Associations</h2>
-        </header>
-
-        {% for association in site.data.associations %}
-        <div class="resume-item" itemscope itemprop="memberOf" itemtype="http://schema.org/Organization">
-          <h3 class="resume-item-title" itemprop="name">{% if association.url %}<a href="{{ association.url }}">{{ association.organization }}</a>{% else %}{{ association.organization }}{% endif %}</h3>
-          <h4 class="resume-item-details" itemprop="description">{{ association.role }} &bull; {{ association.year }}</h4>
-          <p class="resume-item-copy">{{ association.summary }}</p>
-        </div>
-        {% endfor %}
-
-      </section>
-      <!-- end Associations -->
-      {% endif %}
-
-      {% if site.resume_section_interests %}
-      <!-- begin Interests -->
-      <section class="content-section">
-
-        <header class="section-header">
-          <h2>Outside Interests</h2>
-        </header>
-
-        <div class="resume-item">
-          <ul class="resume-item-list">
-            {% for interest in site.data.interests %}
-            <li>{{ interest.description }}</li>
-            {% endfor %}
+        <div class="resume-item" itemscope itemtype="http://schema.org/CreativeWork">
+          <meta itemprop="creator" content="{{ site.resume_name }}" itemtype="http://schema.org/Person" />
+          <ul class="resume-item-list" itemprop="description">
+            <li>Best TA Ph.D. Student Award in KAIST, 2023</li>
+            <li>Best TA Award in KAIST, 2020</li>
+            <li>Best Paper Award, USENIX FAST 2018</li>
           </ul>
         </div>
 
       </section>
-      <!-- end Interests -->
+      <!-- end Recognition -->
       {% endif %}
 
       {% if site.resume_print_social_links %}
