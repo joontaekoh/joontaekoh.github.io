@@ -83,7 +83,7 @@
 
         <div class="resume-item">
           <ul class="resume-item-list">
-            <li>[USENIX FAST] Joontaek Oh, Seung Won Yoo, Hojin Nam, Changwoo Min and Youjip Won, “CJFS : Concurrent Journaling for Better Scalability”, In Proc. of USENIX Conference on File and Storage Technologies (FAST) 2023, Feb, 20-23, 2022</li>
+            <h4></h4><li>[USENIX FAST] Joontaek Oh, Seung Won Yoo, Hojin Nam, Changwoo Min and Youjip Won, “CJFS : Concurrent Journaling for Better Scalability”, In Proc. of USENIX Conference on File and Storage Technologies (FAST) 2023, Feb, 20-23, 2022</li></ul>h4>
             <li>[USENIX ATC] Juwon Kim, Minsu Jang, Danish Muhammad Teeshen, Joontaek Oh, and Youjip Won “IPLFS: Log-Structured File System without Garbage Collection“, In Proc. of USENIX Annual Technical Conference (ATC) 2022, July. 11-13, 2022</li>
             <li>[ACM SYSTOR] Seung Won Yoo, Joontaek Oh, and Youjip Won “O-AFA: Order Preserving All Flash Array“, in Proc. of The ACM International Systems and Storage Conference (SYSTOR), Haifa, Israel, June. 13-15, 2022</li>
             <li>[USENIX FAST] Dohyun Kim, Kwangwon Min, Joontaek Oh, and Youjip Won “ScaleXFS: Getting scalability of XFS back on the ring“, In Proc. of USENIX Conference on File and Storage Technologies (FAST) 2022, Feb, 22-24, 2022</li>
@@ -111,28 +111,10 @@
           <h4 class="resume-item-details" itemprop="description">{{ project.role }}  &bull; {{ project.duration }}</h4>
           <p class="resume-item-copy">{{ project.description }}</p>
         </div>
-      {% endfor %}
-
-      </section>
-      <!-- end Projects -->
-      {% endif %}
-
-      {% if site.resume_section_skills %}
-      <!-- begin Skills -->
-      <section class="content-section">
-
-        <header class="section-header">
-          <h2>Skills</h2>
-        </header>
-        {% for skill in site.data.skills %}
-        <div class="resume-item">
-          <h4 class="resume-item-details">{{ skill.skill }}</h4>
-          <p class="resume-item-copy">{{ skill.description }}</p>
-        </div>
         {% endfor %}
 
       </section>
-      <!-- end Skills -->
+      <!-- end Projects -->
       {% endif %}
 
       {% if site.resume_section_recognition %}
@@ -140,7 +122,7 @@
       <section class="content-section">
 
         <header class="section-header">
-          <h2>Recognition</h2>
+          <h2>Awards</h2>
         </header>
 
         {% for recognition in site.data.recognitions %}
