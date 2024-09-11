@@ -11,16 +11,16 @@ sass:
 # Resume settings
 resume_avatar:                  "true"
 resume_name:                    "Joontaek Oh"
-resume_title:                   "Research Associate at Dep. of EE in KAIST"
+resume_title:                   "Postdoctoral Researcher at School of CS in UW-Madison"
 
 # used for the contact button in _layouts/resume.html
-resume_contact_email:           "na94jun@kaist.ac.kr"
+resume_contact_email:           "joontaek.oh@wisc.edu"
 
 # the next two items are used for schema itemprops in _layouts/resume.html
-resume_contact_telephone:       "+82-10-8207-4297"
-resume_contact_address:         "291, Daehak-ro, Yuseong-gu, Daejeon, Republic of Korea	"
+resume_contact_telephone:       ""
+resume_contact_address:         ""
 
-resume_header_contact_info:     "291, Daehak-ro, Yuseong-gu, Daejeon, Republic of Korea	 • +82-10-8207-4297 • na94jun@kaist.ac.kr"
+resume_header_contact_info:     ""
 display_header_contact_info:    "false"
 
 resume_header_intro: "<p>
